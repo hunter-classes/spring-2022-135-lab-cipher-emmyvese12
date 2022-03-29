@@ -92,7 +92,7 @@ std::string solve(std::string encrypted_string){
 
     //calc the frequency of each letter in the encrypted_string
     int length = 0;
-    int freqCount[26] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    double freqCount[26] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
     for (int i = 0; i < encrypted_string.length(); i++){
         
         //total up the number of letters, taking into account uppercase and lowercase letters
@@ -101,16 +101,17 @@ std::string solve(std::string encrypted_string){
             length++; //counts the letters w/o spaces or symbols
             int placement = indexOfLetter(letter);
             //now we found the index of where to place the letter, add 1 into the index of the letter to count that 1 is found
-            freqCount[placement] = freqCount[placement] + 1; //add 1
+            freqCount[placement] = freqCount[placement] + 1.0; //add 1
         }
 
     }
-    //print array to check
+    //calculate the frequency now that the array has the number of letters in its correct index
     for (int i = 0; i < 26; i++){
-        std::cout << freqCount[i] << std::endl;
+        std::cout << freqCount[i]/length << std::endl;
     }
+    
 
 
-    return 0;
+    return decoded;
 }
 
