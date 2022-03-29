@@ -1,10 +1,10 @@
 * Fall 2021 - Lab Cipher
 
-* Last name:
+* Last name: Veselinov
 
-* First name:
+* First name: Emmy
 
-* GitHub username:
+* GitHub username: emmyvese12
 
 * Notes:
 
