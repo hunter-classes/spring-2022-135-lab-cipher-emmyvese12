@@ -5,12 +5,11 @@ char shiftChar(char c, int rshift);
 
 std::string encryptCaesar(std::string plaintext, int rshift);
 
-int indexOfLetter(char letter);
-
 double distance(double v1[], double v2[], int len);
 
+int indexOfLetter(char letter);
+
+std::string shiftString(std::string string);
+
 std::string solve(std::string encrypted_string);
-
-
-
 
